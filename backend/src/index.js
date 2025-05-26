@@ -16,11 +16,14 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "https://chat-backend-z623.onrender.com",
       "https://bjn765vn-5173.inc1.devtunnels.ms"
     ],
     credentials: true,
   })
 );
+// Add at the top with other middleware
+app.set("trust proxy", 1);
 
 const port = process.env.PORT
 
